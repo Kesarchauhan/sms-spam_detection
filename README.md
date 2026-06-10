@@ -18,17 +18,32 @@ Streamlit App: [https://sms-spamdetection-n6uos3cckcfwsrn5g4syq6.streamlit.app/]
 
 ![Home Interface](assets/homepage.png)
 
-### Spam Prediction Example
+The main interface of the Explainable SMS Spam Detection system.
 
-![Spam Prediction](assets/spam_prediction.png)
+### Spam Detection Example
 
-### Ham Prediction Example
+![Spam Detection](assets/spam_detection.png)
 
-![Ham Prediction](assets/ham_prediction.png)
+Example showing a spam SMS correctly classified by the fine-tuned DistilBERT model.
 
-### LIME Explainability
+### Spam Detection with LIME Explanation
 
-![LIME Explanation](assets/lime_explanation.png)
+![Spam Detection LIME](assets/spam_detection_lime_explaination.png)
+
+LIME explanation highlighting the words that contributed most to the spam prediction.
+
+### Ham Detection Example
+
+![Ham Detection](assets/ham_detection.png)
+
+Example showing a legitimate SMS (Ham) correctly classified by the model.
+
+### Ham Detection with LIME Explanation
+
+![Ham Detection LIME](assets/ham_detection_lime_explaination.png)
+
+LIME explanation illustrating the words that influenced the ham prediction.
+
 
 
 ---
