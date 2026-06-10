@@ -10,6 +10,27 @@ This project demonstrates how transformer-based Natural Language Processing (NLP
 
 Streamlit App: [https://sms-spamdetection-n6uos3cckcfwsrn5g4syq6.streamlit.app/]
 
+
+
+## Application Screenshots
+
+### Home Interface
+
+![Home Interface](assets/homepage.png)
+
+### Spam Prediction Example
+
+![Spam Prediction](assets/spam_prediction.png)
+
+### Ham Prediction Example
+
+![Ham Prediction](assets/ham_prediction.png)
+
+### LIME Explainability
+
+![LIME Explanation](assets/lime_explanation.png)
+
+
 ---
 
 ## 🤗 Hugging Face Model
