@@ -203,30 +203,23 @@ with tab1:
 
             st.divider()
 
-            generate_lime = st.checkbox(
-                "Generate LIME Explanation"
-            )
-
-            if generate_lime:
-
-                st.subheader(
+            st.subheader(
                     "🔍 Explainability (LIME)"
                 )
 
-                with st.spinner(
+            with st.spinner(
                     "Generating explanation..."
                 ):
 
-                    explanation = (
-                        explainer.explain_instance(
+                explanation = explainer.explain_instance(
                             sms_text,
                             predict_proba_distilbert,
                             num_features=8,
                             num_samples=30
                         )
-                    )
+                    
 
-                    explanation_df = pd.DataFrame(
+                explanation_df = pd.DataFrame(
                         explanation.as_list(),
                         columns=[
                             "Word",
@@ -234,12 +227,12 @@ with tab1:
                         ]
                     )
 
-                    st.dataframe(
+                st.dataframe(
                         explanation_df,
                         use_container_width=True
                     )
 
-                    st.bar_chart(
+                st.bar_chart(
                         explanation_df.set_index(
                             "Word"
                         )
