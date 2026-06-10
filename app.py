@@ -106,37 +106,41 @@ tab1, tab2 = st.tabs(
 
 with tab1:
 
-    sms_text = st.text_area(
-        "Enter SMS Message",
-        height=180,
-        placeholder="Type or paste an SMS message..."
-    )
+    if "sms_text" not in st.session_state:
+        st.session_state.sms_text = ""
 
     col1, col2 = st.columns(2)
 
     with col1:
 
-        if st.button("Load Spam Example"):
+        if st.button("📛 Load Spam Example"):
 
-            st.session_state.example = (
+            st.session_state.sms_text = (
                 "Congratulations! "
                 "You have won a free iPhone. "
                 "Click here now."
             )
 
+            st.rerun()
+
     with col2:
 
-        if st.button("Load Ham Example"):
+        if st.button("✅ Load Ham Example"):
 
-            st.session_state.example = (
+            st.session_state.sms_text = (
                 "Hey, are we meeting at 4 PM today?"
             )
 
-    if "example" in st.session_state:
+            st.rerun()
 
-        sms_text = st.session_state.example
+    sms_text = st.text_area(
+        "Enter SMS Message",
+        key="sms_text",
+        height=180,
+        placeholder="Type or paste an SMS message..."
+    )
 
-    if st.button("Analyze Message"):
+    if st.button("🔍 Analyze Message"):
 
         if sms_text.strip() == "":
 
@@ -197,14 +201,10 @@ with tab1:
                 f"{confidence*100:.2f}%"
             )
 
-            # =========================================
-            # OPTIONAL LIME
-            # =========================================
-
             st.divider()
 
             generate_lime = st.checkbox(
-                "Generate LIME Explanation (takes a few seconds)"
+                "Generate LIME Explanation"
             )
 
             if generate_lime:
