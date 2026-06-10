@@ -28,7 +28,7 @@ Example showing a spam SMS correctly classified by the fine-tuned DistilBERT mod
 
 ### Spam Detection with LIME Explanation
 
-![Spam Detection LIME](assets/spam_detection_lime_explaination.png)
+![Spam Detection LIME](assets/spam_detection_LIME.png)
 
 LIME explanation highlighting the words that contributed most to the spam prediction.
 
@@ -40,7 +40,7 @@ Example showing a legitimate SMS (Ham) correctly classified by the model.
 
 ### Ham Detection with LIME Explanation
 
-![Ham Detection LIME](assets/ham_detection_lime_explaination.png)
+![Ham Detection LIME](assets/ham_detection_LIME.png)
 
 LIME explanation illustrating the words that influenced the ham prediction.
 
